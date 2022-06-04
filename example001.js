@@ -9,11 +9,11 @@ client.on("ready", () => {
 
 //グローバルチャット
 client.on("messageCreate", message => {
-    if (message.author?.bot || message.channel.name != "グローバルチャット") return;
+    if (message.author?.bot || !message.channel.topic?.match(/tester.gchat/)) return;
 
     client.channels.cache.forEach(ch => {
         console.log(ch.name);
-        if (ch.type == "GUILD_TEXT" && ch.name === "グローバルチャット") {
+        if (ch.type == "GUILD_TEXT" && ch.topic?.match(/tester.gchat/)) {
             var embed = new MessageEmbed({
                 title: "",
                 color: "RANDOM",
@@ -99,7 +99,7 @@ client.on("messageCreate", message => {
         /* 以下コピペと連携用の修正 */
         client.channels.cache.forEach(ch => {
             console.log(ch.name);
-            if (ch.type == "GUILD_TEXT" && ch.name === "グローバルチャット") {
+            if (ch.type == "GUILD_TEXT" && ch.topic?.match(/tester.gchat/)) {
                 var embed = new MessageEmbed({
                     title: "",
                     color: "RANDOM",

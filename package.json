@@ -1,0 +1,26 @@
+{
+  "name": "ugc-example-discord.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dummy.js",
+  "scripts": {
+    "test": "node dummy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Union-Global-Chat/example-discord.js.git"
+  },
+  "author": "Renorari",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Union-Global-Chat/example-discord.js/issues"
+  },
+  "homepage": "https://github.com/Union-Global-Chat/example-discord.js#readme",
+  "devDependencies": {
+    "eslint": "^8.17.0"
+  },
+  "dependencies": {
+    "discord.js": "^13.7.0",
+    "dotenv": "^16.0.1"
+  }
+}

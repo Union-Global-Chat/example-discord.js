@@ -1,0 +1,1 @@
+console.log("look forward to exampleXXX.js\nexampleXXX.jsをご覧ください");

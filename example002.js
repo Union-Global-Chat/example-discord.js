@@ -61,7 +61,7 @@ client.on("messageCreate", message => {
                     "message": {
                         "content": message.content,
                         "id": message.id,
-                        "cleanContent": message.cleanContent,
+                        "clean_content": message.cleanContent,
                         "reference": {
                             "channel_id": message.reference.channelId,
                             "guild_id": message.reference.guildId,

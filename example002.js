@@ -63,9 +63,9 @@ client.on("messageCreate", message => {
                         "id": message.id,
                         "clean_content": message.cleanContent,
                         "reference": {
-                            "channel_id":  Object.prototype.hasOwnProperty.call(message.reference, "channelId") ? message.reference.channelId : null,
-                            "guild_id": Object.prototype.hasOwnProperty.call(message.reference, "guildId") ? message.reference.guildId : null,
-                            "message_id": Object.prototype.hasOwnProperty.call(message.reference, "messageId") ? message.reference.messageId : null
+                            "channel_id": (message.reference?.channelId || null),
+                            "guild_id": (message.reference?.guildId || null),
+                            "message_id": (message.reference?.messageId || null)
                         },
                         "attachments": message.attachments.map((attachment) => ({
                             "name": attachment.name,
